@@ -21,8 +21,8 @@ const Card: React.FC<CardProps> = ({
     <div className="bg-white border border-gray-300 p-4 shadow shadow-gray-500 flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <div>
-          <h3 className="text-lg font-bold">{number}</h3>
-          <h4 className="text-md font-semibold">{title}</h4>
+          <h3 className="text-md font-bold">{number}</h3>
+          <h4 className="text-sm font-semibold">{title}</h4>
         </div>
         <div className="w-12 h-12">{icon}</div>
       </div>
