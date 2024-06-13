@@ -16,8 +16,8 @@ const Dashboard: React.FC = () => {
           <Calendar
             value={today}
             className="w-full"
-            nextLabel={<span className="text-blue-500">›</span>}
-            prevLabel={<span className="text-blue-500">‹</span>}
+            nextLabel={<span className="text-blue-600">›</span>}
+            prevLabel={<span className="text-blue-600">‹</span>}
             tileClassName="hover:bg-blue-100 p-2 rounded"
           />
         </div>
