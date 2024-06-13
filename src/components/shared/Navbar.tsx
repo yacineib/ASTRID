@@ -19,17 +19,21 @@ export default function Navbar() {
   return (
     <div className="sticky flex flex-col items-center text-sm w-[17%] mt-2">
       <div className="">
-        <img
-          src={LogoAstrid}
-          alt="logoAstrid"
-          className="max-h-[12vh] cursor-pointer"
-        />
+        <a href="/">
+          <img
+            src={LogoAstrid}
+            alt="logoAstrid"
+            className="max-h-[12vh] cursor-pointer"
+          />
+        </a>
       </div>
 
       <div className="flex flex-col my-10 bg-[#F6F6F6] w-[100%] text-[#0454A2] h-[70%]">
         <div className=" flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] ">
           <DashboardIcon className="mr-[4%] ml-[8%]" />
-          <div>Accueil</div>
+          <a href="/">
+            <div>Accueil</div>
+          </a>
         </div>
 
         <div
@@ -79,19 +83,29 @@ export default function Navbar() {
           )}
         </div>
 
-        <div >
-          <div onClick={() => setIsGouvCollapsed(!isGouvCollapsed)} className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] ">
+        <div>
+          <div
+            onClick={() => setIsGouvCollapsed(!isGouvCollapsed)}
+            className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] "
+          >
             <CubeIcon className="mr-[4%] ml-[8%]" />
             <div>Gouvernance fournissuer</div>
             <ChevronUpIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
           </div>
           {isGouvCollapsed && (
             <div className="text-xs">
-              <div className="ml-[19%] mt-1 cursor-pointer">Gestion TJM consultants</div>
-              <div className="ml-[19%] mt-1 cursor-pointer">Gestion Emails Fournisseurs</div>
-              <div className="ml-[19%] mt-1 cursor-pointer">Consultation declaration d’heures</div>
-              <div className="ml-[19%] mt-1 cursor-pointer">Export déclarations d’heures</div>
-
+              <div className="ml-[19%] mt-1 cursor-pointer">
+                Gestion TJM consultants
+              </div>
+              <div className="ml-[19%] mt-1 cursor-pointer">
+                Gestion Emails Fournisseurs
+              </div>
+              <div className="ml-[19%] mt-1 cursor-pointer">
+                Consultation declaration d’heures
+              </div>
+              <div className="ml-[19%] mt-1 cursor-pointer">
+                Export déclarations d’heures
+              </div>
             </div>
           )}
         </div>
@@ -101,7 +115,7 @@ export default function Navbar() {
             alt="contacter_support"
             className="max-h-[3vh] cursor-pointer mr-[4%] ml-[8%]"
           />
-          <div>Contacter support ASTRID</div>
+          <div>Contacter support</div>
         </div>
         <div className="flex bg-[white]">
           <QuestionMarkCircledIcon className="mr-[4%] ml-[8%]" />
