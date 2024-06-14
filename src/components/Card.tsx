@@ -18,10 +18,10 @@ const Card: React.FC<CardProps> = ({
   icon,
 }) => {
   return (
-    <div className="bg-white border border-gray-300 p-4 shadow shadow-gray-500 flex flex-col">
-      <div className="flex justify-between items-center mb-4">
-        <div>
-          <h3 className="text-md font-bold">{number}</h3>
+    <div className="boxes bg-[#F6F6F6] p-4 flex flex-col">
+      <div className="flex justify-between items-center ">
+        <div className="">
+          <h3 className="font-bold text-xl leading-[23px]">{number}</h3>
           <h4 className="text-sm font-semibold">{title}</h4>
         </div>
         <div className="w-12 h-12">{icon}</div>

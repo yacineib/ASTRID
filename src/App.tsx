@@ -9,9 +9,9 @@ import ModifierDelegation from "./pages/ModifierDelegations";
 
 function App() {
   return (
-    <div className="flex min-h-[100vh] w-[97%] m-auto gap-5">
+    <div className="flex min-h-[100vh] w-[99%] m-auto gap-5">
       <Navbar />
-      <div className="flex flex-col w-[80%] gap-16">
+      <div className="flex flex-col w-[80%] gap-20">
         <Header />
         <BrowserRouter>
           <Routes>

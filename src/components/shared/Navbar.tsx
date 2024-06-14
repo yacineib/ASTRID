@@ -17,13 +17,13 @@ export default function Navbar() {
   const [isGouvCollapsed, setIsGouvCollapsed] = useState(false);
 
   return (
-    <div className="sticky flex flex-col items-center text-sm w-[19%] mt-2 min-h-[100vh]">
+    <div className="flex flex-col items-center text-sm w-[18%] mt-2 h-[116vh]">
       <div className="">
         <a href="/">
           <img
             src={LogoAstrid}
             alt="logoAstrid"
-            className="max-h-[12vh] cursor-pointer"
+            className="max-h-[10vh] cursor-pointer"
           />
         </a>
       </div>
@@ -51,16 +51,16 @@ export default function Navbar() {
             )}
           </div>
           {isAdminCollapsed && (
-            <div className="text-xs">
-              <div className="ml-[19%] py-1 mt-1 cursor-pointer">Comptes</div>
-              <div className="ml-[19%] py-1 mt-1 cursor-pointer">
+            <div className="text-xs ">
+              <div className="pl-[19%] py-1 mt-1 cursor-pointer bg-white">Comptes</div>
+              <div className="pl-[19%] py-1 mt-1 cursor-pointer bg-white">
                 Modifier le pilote
               </div>
-              <div className="ml-[19%] py-1 mt-1 cursor-pointer">
+              <div className="pl-[19%] py-1 mt-1 cursor-pointer bg-white">
                 Lever/Remettre le verrou
               </div>
-              <div className="ml-[19%] py-1 mt-1 cursor-pointer">Log</div>
-              <div className="ml-[19%] py-1 mt-1 cursor-pointer">Log Erreurs</div>
+              <div className="pl-[19%] py-1 mt-1 cursor-pointer bg-white">Log</div>
+              <div className="pl-[19%] py-1 mt-1 cursor-pointer bg-white">Log Erreurs</div>
             </div>
           )}
         </div>
@@ -81,8 +81,8 @@ export default function Navbar() {
           </div>
           {isConsultationCollapsed && (
             <div className="text-xs">
-              <div className="ml-[19%] mt-1 cursor-pointer">Interventions</div>
-              <div className="ml-[19%] mt-1 cursor-pointer">
+              <div className="pl-[19%] mt-1 cursor-pointer bg-white">Interventions</div>
+              <div className="pl-[19%] mt-1 cursor-pointer bg-white">
                 Déclaration d’heures
               </div>
             </div>
