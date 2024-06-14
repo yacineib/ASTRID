@@ -103,7 +103,11 @@ const ModifierDelegation = () => {
     data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
   });
 
-  return <MaterialReactTable table={table} />;
+  return (
+    <div className="mt-20 w-[80%] m-auto">
+      <MaterialReactTable table={table} />
+    </div>
+  );
 };
 
 export default ModifierDelegation;

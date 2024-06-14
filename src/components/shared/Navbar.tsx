@@ -17,7 +17,7 @@ export default function Navbar() {
   const [isGouvCollapsed, setIsGouvCollapsed] = useState(false);
 
   return (
-    <div className="sticky flex flex-col items-center text-sm w-[17%] mt-2">
+    <div className="sticky flex flex-col items-center text-sm w-[19%] mt-2 min-h-[100vh]">
       <div className="">
         <a href="/">
           <img
@@ -30,18 +30,18 @@ export default function Navbar() {
 
       <div className="flex flex-col my-10 bg-[#F6F6F6] w-[100%] text-[#0454A2] h-[70%]">
         <div className=" flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] ">
-          <DashboardIcon className="mr-[4%] ml-[8%]" />
+          <DashboardIcon className="mr-[4%] ml-[8%] max-h-4" />
           <a href="/">
             <div>Accueil</div>
           </a>
         </div>
 
-        <div
-          className=""
-          onClick={() => setIsAdminCollapsed(!isAdminCollapsed)}
-        >
-          <div className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] ">
-            <GearIcon className="mr-[4%] ml-[8%]" />
+        <div className="">
+          <div
+            className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[26px] "
+            onClick={() => setIsAdminCollapsed(!isAdminCollapsed)}
+          >
+            <GearIcon className="mr-[4%] ml-[8%] max-h-4" />
             <div>Admin</div>
             {isAdminCollapsed && (
               <ChevronDownIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
@@ -52,26 +52,32 @@ export default function Navbar() {
           </div>
           {isAdminCollapsed && (
             <div className="text-xs">
-              <div className="ml-[19%] mt-1 cursor-pointer">Comptes</div>
-              <div className="ml-[19%] mt-1 cursor-pointer">
+              <div className="ml-[19%] py-1 mt-1 cursor-pointer">Comptes</div>
+              <div className="ml-[19%] py-1 mt-1 cursor-pointer">
                 Modifier le pilote
               </div>
-              <div className="ml-[19%] mt-1 cursor-pointer">
+              <div className="ml-[19%] py-1 mt-1 cursor-pointer">
                 Lever/Remettre le verrou
               </div>
-              <div className="ml-[19%] mt-1 cursor-pointer">Log</div>
-              <div className="ml-[19%] mt-1 cursor-pointer">Log Erreurs</div>
+              <div className="ml-[19%] py-1 mt-1 cursor-pointer">Log</div>
+              <div className="ml-[19%] py-1 mt-1 cursor-pointer">Log Erreurs</div>
             </div>
           )}
         </div>
 
-        <div
-          onClick={() => setIsConsultationCollapsed(!isConsultationCollapsed)}
-        >
-          <div className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] ">
-            <EyeOpenIcon className="mr-[4%] ml-[8%]" />
+        <div>
+          <div
+            className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[26px] "
+            onClick={() => setIsConsultationCollapsed(!isConsultationCollapsed)}
+          >
+            <EyeOpenIcon className="mr-[4%] ml-[8%] max-h-4" />
             <div>Consultation</div>
-            <ChevronUpIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
+            {isConsultationCollapsed && (
+              <ChevronDownIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
+            )}
+            {!isConsultationCollapsed && (
+              <ChevronUpIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
+            )}
           </div>
           {isConsultationCollapsed && (
             <div className="text-xs">
@@ -86,11 +92,16 @@ export default function Navbar() {
         <div>
           <div
             onClick={() => setIsGouvCollapsed(!isGouvCollapsed)}
-            className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[29px] "
+            className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[26px] "
           >
-            <CubeIcon className="mr-[4%] ml-[8%]" />
+            <CubeIcon className="mr-[4%] ml-[8%] max-h-4" />
             <div>Gouvernance fournissuer</div>
-            <ChevronUpIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
+            {isGouvCollapsed && (
+              <ChevronDownIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
+            )}
+            {!isGouvCollapsed && (
+              <ChevronUpIcon className="ml-auto mr-[5%] mt-1 max-h-[45%]" />
+            )}
           </div>
           {isGouvCollapsed && (
             <div className="text-xs">
@@ -109,16 +120,16 @@ export default function Navbar() {
             </div>
           )}
         </div>
-        <div className="flex mt-auto bg-[white]">
+        <div className="mt-auto flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[26px]">
           <img
             src={Contactimg}
             alt="contacter_support"
-            className="max-h-[3vh] cursor-pointer mr-[4%] ml-[8%]"
+            className="max-h-[2.5vh] cursor-pointer mr-[4%] ml-[8%]"
           />
           <div>Contacter support</div>
         </div>
-        <div className="flex bg-[white]">
-          <QuestionMarkCircledIcon className="mr-[4%] ml-[8%]" />
+        <div className="flex items-center mt-[1vh] w-[100%] cursor-pointer bg-[white] h-[26px] ">
+          <QuestionMarkCircledIcon className="mr-[6%] ml-[8%] max-h-4 ml-[3px]" />
           <div>Aide</div>
         </div>
       </div>
