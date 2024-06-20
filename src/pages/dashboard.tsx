@@ -10,7 +10,7 @@ const Dashboard: React.FC = () => {
   const today = new Date();
 
   return (
-    <div className="flex flex-col md:flex-row items-center p-4">
+    <div className="flex flex-grow flex-col md:flex-row items-center p-5">
       <div className="bg-gray-100 p-4 mr-4 w-full md:w-1/3 rounded-lg shadow-lg border border-gray-300">
         <div className="w-full">
           <Calendar
@@ -22,7 +22,7 @@ const Dashboard: React.FC = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-4 gap-4 flex-grow">
         <Card
           number="300"
           title="Interventions"
@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
             </div>
           }
           linkText="Voir les interventions"
-          linkHref="#"
+          linkHref="/interventions"
           icon={
             <img
               src={interventionIcon}
@@ -104,7 +104,6 @@ const Dashboard: React.FC = () => {
           }
         />
       </div>
-
     </div>
   );
 };
