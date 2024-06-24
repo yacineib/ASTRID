@@ -1,11 +1,12 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import {
   MaterialReactTable,
   useMaterialReactTable,
   type MRT_ColumnDef,
 } from "material-react-table";
+import PopUp from "../components/shared/PopUp";
+import FormIntervention from "../components/Interventions/FormIntervention";
 
-//example data type
 type Intervention = {
   id: number;
   domaine: string;
@@ -13,7 +14,6 @@ type Intervention = {
   dateMep: Date;
 };
 
-//nested data is ok, see accessorKeys in ColumnDef below
 const data: Intervention[] = [
   {
     id: 1,
@@ -65,7 +65,6 @@ const data: Intervention[] = [
   },
 ];
 
-// Utility function to format the date
 const formatDate = (date: Date) => {
   const day = String(date.getDate()).padStart(2, "0");
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -74,16 +73,16 @@ const formatDate = (date: Date) => {
 };
 
 const handleButtonClick = (id: number) => {
-  console.log(` ID: ${id}`);
-  // Ajoutez ici toute autre logique nécessaire
+  console.log(`ID: ${id}`);
 };
 
 const ListeInterventions = () => {
-  //should be memoized or stable
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+
   const columns = useMemo<MRT_ColumnDef<Intervention>[]>(
     () => [
       {
-        accessorKey: "id", //access nested data with dot notation
+        accessorKey: "id",
         header: "ID",
         size: 150,
       },
@@ -93,7 +92,7 @@ const ListeInterventions = () => {
         size: 150,
       },
       {
-        accessorKey: "codeProjet", //normal accessorKey
+        accessorKey: "codeProjet",
         header: "Code du Projet",
         size: 200,
       },
@@ -101,7 +100,7 @@ const ListeInterventions = () => {
         accessorKey: "dateMep",
         header: "Date de MEP",
         size: 150,
-        Cell: ({ cell }) => formatDate(cell.getValue<Date>()), // Format the date
+        Cell: ({ cell }) => formatDate(cell.getValue<Date>()),
       },
       {
         id: "actions",
@@ -110,7 +109,7 @@ const ListeInterventions = () => {
         Cell: ({ row }) => (
           <button
             onClick={() => handleButtonClick(row.original.id)}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
           >
             Modifier
           </button>
@@ -122,7 +121,7 @@ const ListeInterventions = () => {
 
   const table = useMaterialReactTable({
     columns,
-    data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
+    data,
   });
 
   return (
@@ -131,11 +130,20 @@ const ListeInterventions = () => {
         Liste des interventions
       </h2>
       <div className="flex justify-end">
-        <a className="text-blue-500 hover:underline cursor-pointer">Ajouter</a>
+        <a
+          onClick={() => setIsPopUpOpen(true)}
+          className="text-blue-500 hover:underline cursor-pointer"
+        >
+          Ajouter
+        </a>
       </div>
       <div className="mt-4 w-[90%] m-auto">
         <MaterialReactTable table={table} />
       </div>
+
+      <PopUp isOpen={isPopUpOpen} onClose={() => setIsPopUpOpen(false)}>
+        <FormIntervention onClose={() => setIsPopUpOpen(false)} />
+      </PopUp>
     </div>
   );
 };

@@ -7,12 +7,11 @@ import {
   CubeIcon,
   DashboardIcon,
   QuestionMarkCircledIcon,
-  ChevronRightIcon,
-  ChevronLeftIcon,
 } from "@radix-ui/react-icons";
 import LogoAstrid from "../../assets/Logo_astrid.png";
 import LogoAstridSmall from "../../assets/logoAstrid.png";
 import { FaHeadphones } from "react-icons/fa6";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -32,15 +31,15 @@ const Navbar = () => {
     >
       <div className="absolute top-2 right-2 cursor-pointer">
         {isCollapsed ? (
-          <div className="p-2 rounded-full bg-white shadow-md">
-            <ChevronRightIcon
+          <div className="p-2 rounded-lg bg-gray-300 shadow-md hover:bg-gray-400 ">
+            <FaAngleDoubleRight
               className="text-blue-800"
               onClick={toggleCollapse}
             />
           </div>
         ) : (
-          <div className="p-2 rounded-full bg-white shadow-md">
-            <ChevronLeftIcon
+          <div className="p-2 rounded-lg bg-gray-300 shadow-md hover:bg-gray-400">
+            <FaAngleDoubleLeft
               className="text-blue-800"
               onClick={toggleCollapse}
             />
@@ -49,11 +48,13 @@ const Navbar = () => {
       </div>
 
       <div className="flex justify-center w-full cursor-pointer mt-10">
-        <img
-          src={isCollapsed ? LogoAstridSmall : LogoAstrid}
-          alt="logoAstrid"
-          className={`max-h-[10vh] ${isCollapsed ? "block" : "block"}`}
-        />
+        <a href="/">
+          <img
+            src={isCollapsed ? LogoAstridSmall : LogoAstrid}
+            alt="logoAstrid"
+            className={`max-h-[10vh] ${isCollapsed ? "block" : "block"}`}
+          />
+        </a>
       </div>
 
       <div className="flex flex-col my-10 bg-[#F6F6F6] w-full text-[#0454A2] h-[70%]">
@@ -163,10 +164,17 @@ const Navbar = () => {
         </div>
 
         <div className="mt-auto flex items-center w-full cursor-pointer bg-white h-[26px]">
-          <FaHeadphones className="mr-[6%] ml-[8%] max-h-4 text-blue-800" />
-          {!isCollapsed && (
-            <div className="flex-grow text-blue-800">Contacter support</div>
-          )}
+          <a
+            href="https://bynow.service-now.com/spdsi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row items-center w-full"
+          >
+            <FaHeadphones className="mr-[6%] ml-[8%] max-h-4 text-blue-800" />
+            {!isCollapsed && (
+              <div className="flex-grow text-blue-800">Contacter support</div>
+            )}
+          </a>
         </div>
 
         <div className="flex items-center mt-[1vh] w-full cursor-pointer bg-white h-[26px]">
