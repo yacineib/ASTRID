@@ -1,7 +1,7 @@
 import React from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import Card from "../components/Card";
+import Card from "../components/shared/Card";
 import interventionIcon from "../assets/intervention.png";
 import declarationIcon from "../assets/declaration.png";
 import delegationIcon from "../assets/delegation.png";
@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
         <div className="w-full">
           <Calendar
             value={today}
-            className="w-full"
+            className="w-full rounded-lg"
             nextLabel={<span className="text-blue-600">›</span>}
             prevLabel={<span className="text-blue-600">‹</span>}
             tileClassName="hover:bg-blue-100 p-2 rounded"

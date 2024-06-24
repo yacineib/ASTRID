@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/shared/Navbar";
-import UserProfile from "./components/shared/UserProfile";
+import UserProfile from "./pages/UserProfile";
 import Header from "./components/shared/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/dashboard";
