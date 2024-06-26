@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex justify-center w-full cursor-pointer mt-10">
-        <a href="/">
+        <a href="/" className="flex-grow">
           <img
             src={isCollapsed ? LogoAstridSmall : LogoAstrid}
             alt="logoAstrid"
@@ -84,19 +84,29 @@ const Navbar = () => {
           {isAdminCollapsed && !isCollapsed && (
             <div className="text-xs bg-white">
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Comptes
+                <a href="/admin/comptes" className="flex-grow">
+                  Comptes
+                </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
+              <a href="/admin/update/pilote" className="flex-grow">
                 Modifier le pilote
+                </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
+              <a href="/admin/verrou" className="flex-grow">
                 Lever/Remettre le verrou
+                </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
+              <a href="/admin/log" className="flex-grow">
                 Log
+                </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
+              <a href="/admin/log/erreurs" className="flex-grow">
                 Log Erreurs
+                </a>
               </div>
             </div>
           )}

@@ -109,7 +109,7 @@ const ListeInterventions = () => {
         Cell: ({ row }) => (
           <button
             onClick={() => handleButtonClick(row.original.id)}
-            className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+            className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-xl"
           >
             Modifier
           </button>
