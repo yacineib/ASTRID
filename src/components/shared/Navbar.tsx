@@ -89,23 +89,23 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-              <a href="/admin/update/pilote" className="flex-grow">
-                Modifier le pilote
+                <a href="/admin/update/pilote" className="flex-grow">
+                  Modifier le pilote
                 </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-              <a href="/admin/verrou" className="flex-grow">
-                Lever/Remettre le verrou
+                <a href="/admin/verrou" className="flex-grow">
+                  Lever/Remettre le verrou
                 </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-              <a href="/admin/log" className="flex-grow">
-                Log
+                <a href="/admin/log" className="flex-grow">
+                  Log
                 </a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-              <a href="/admin/log/erreurs" className="flex-grow">
-                Log Erreurs
+                <a href="/admin/log/erreurs" className="flex-grow">
+                  Log Erreurs
                 </a>
               </div>
             </div>
@@ -129,10 +129,10 @@ const Navbar = () => {
           {isConsultationCollapsed && !isCollapsed && (
             <div className="text-xs bg-white">
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Interventions
+                <a href="/interventions/consulter">Interventions</a>
               </div>
               <div className="pl-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Déclarations d'heures
+                <a href="/déclarations/consulter">Déclarations d'heures</a>
               </div>
             </div>
           )}
@@ -157,17 +157,25 @@ const Navbar = () => {
           {isGouvCollapsed && !isCollapsed && (
             <div className="text-xs bg-white">
               <div className="ml-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Gestion TJM consultants
+                <a href="/gouvernaceFournisseur/TJMConsultant">
+                  Gestion TJM consultants
+                </a>
               </div>
 
               <div className="ml-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Gestion Emails Fournisseurs
+                <a href="/gouvernaceFournisseur/emailsFournisseurs">
+                  Gestion Emails Fournisseurs
+                </a>
               </div>
               <div className="ml-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Consultation déclaration d’heures
+                <a href="/gouvernaceFournisseur/déclarations/consulter">
+                  Consultation déclarations d’heures
+                </a>
               </div>
               <div className="ml-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                Export déclarations d’heures
+                <a href="/gouvernaceFournisseur/déclarations/exporter">
+                  Export déclarations d’heures
+                </a>
               </div>
             </div>
           )}

@@ -1,11 +1,11 @@
 import React from "react";
-import "../index.css";
+import "./../../index.css";
 
-const AdminVerrou: React.FC = () => {
+const AdminModifierPilote: React.FC = () => {
   return (
     <div className="text-sm p-2">
       <h2 className="p-2 pt-8 text-base text-left font-bold">
-        Lever/Remettre le verrou des intervenants :
+        Modifier le pilote d'une intervention
       </h2>
       <div className="container mx-auto px-32 py-8 ">
         <form className="grid grid-cols-1 gap-4">
@@ -22,7 +22,7 @@ const AdminVerrou: React.FC = () => {
 
             <div className="col-span-1  mt-4">
               <label className="block text-sm font-bold text-gray-700">
-                Intervenant :
+                Pilote Projet :
               </label>
               <input
                 type="text"
@@ -51,4 +51,4 @@ const AdminVerrou: React.FC = () => {
   );
 };
 
-export default AdminVerrou;
+export default AdminModifierPilote;
