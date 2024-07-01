@@ -168,7 +168,7 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="ml-[19%] py-1 mt-1 cursor-pointer text-blue-800">
-                <a href="/gouvernaceFournisseur/déclarations/consulter">
+                <a href="/gouvernaceFournisseur/déclarationsPrestataires">
                   Consultation déclarations d’heures
                 </a>
               </div>

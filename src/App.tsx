@@ -14,6 +14,7 @@ import AdminLogErreurs from "./pages/Admin/AdminLogErreurs.tsx";
 import TJMConsultants from "./pages/GouvernanceFournisseur/TJMConsultants.tsx";
 import ExportDeclarations from "./pages/GouvernanceFournisseur/ExportDeclarations.tsx";
 import ConsulterDeclaration from "./pages/Consultation/ConsulterDeclaration.tsx";
+import ConsulterDeclarationPrestatire from "./pages/GouvernanceFournisseur/ConsulterDeclarationPrestataire.tsx";
 import ConsulterIntervention from "./pages/Consultation/ConsulterIntervention.tsx";
 
 const App = () => {
@@ -48,8 +49,8 @@ const App = () => {
               element={<AdminVerrou />}
             />
             <Route
-              path="/gouvernaceFournisseur/déclarations/consulter"
-              element={<ConsulterDeclaration />}
+              path="/gouvernaceFournisseur/déclarationsPrestataires"
+              element={<ConsulterDeclarationPrestatire />}
             />
             <Route
               path="/gouvernaceFournisseur/déclarations/exporter"

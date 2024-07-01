@@ -1,11 +1,11 @@
 import React from "react";
 import "./../../index.css";
 
-const ConsulterDeclaration: React.FC = () => {
+const ConsulterDeclarationPrestataire: React.FC = () => {
   return (
     <div className="text-sm p-2">
       <h2 className="p-2 pt-8 text-base text-left font-bold">
-        Consultation des déclarations d'heures :
+        Consultation des déclarations d'heures des prestataires:
       </h2>
       <div className="container mx-auto px-32 py-8 ">
         <form className="grid grid-cols-1 gap-4">
@@ -78,18 +78,6 @@ const ConsulterDeclaration: React.FC = () => {
 
             <div className="col-span-1  mt-4">
               <label className="block text-sm font-bold text-gray-700">
-                Type d'acteur :
-              </label>
-              <select className="block w-full p-2 border border-gray-700 rounded-lg">
-                <option value="" disabled>
-                  Choisir
-                </option>
-                <option value="B2B">Collaborateur</option>
-                <option value="B2C">Prestataire</option>
-              </select>
-            </div>
-            <div className="col-span-1  mt-4">
-              <label className="block text-sm font-bold text-gray-700">
                 Acteur :
               </label>
               <select className="block w-full p-2 border border-gray-700 rounded-lg">
@@ -122,4 +110,4 @@ const ConsulterDeclaration: React.FC = () => {
   );
 };
 
-export default ConsulterDeclaration;
+export default ConsulterDeclarationPrestataire;

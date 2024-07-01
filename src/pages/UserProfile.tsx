@@ -42,7 +42,7 @@ const UserProfile: React.FC = () => {
             </h2>
             <p>° Aucune délégation donnée</p>
             <a href="/user/délégations/modifier">
-              <button className="mt-2 mb-2 px-2 py-1 bg-blue-800 text-white font-bold italic rounded-xl text-xs hover:text-sm">
+              <button className="mt-2 mb-2 px-2 py-1 bg-blue-800 text-white font-bold italic rounded-lg text-sm hover:bg-blue-700">
                 Modifier
               </button>
             </a>
